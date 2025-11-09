@@ -1,0 +1,1907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Accessories — Apple-style (Placeholder images)</title>
+<link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+<style>
+  /* Basic reset and typography */
+  :root{
+    --text:#1d1d1f;
+    --muted:#6e6e73;
+    --accent:#0071e3;
+  }
+  *{box-sizing:border-box}
+  body{
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", Roboto, "Helvetica Neue", Arial;
+    margin:0; color:var(--text); background:#fff;
+  }
+  /* Simple top nav inspired by your index.html */
+  .navbar {
+  height: 40px;
+  background-color: #fffdfd;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 18px;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 8px;
+  transition: color 0.3s;
+}
+
+.nav-items a:hover {
+  color: #fff;
+}
+
+
+
+.store-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.nav3 {
+    position: fixed;
+    top: 40px; 
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 50vh;
+    background-color: #ffffff;
+    backdrop-filter: blur(20px);
+    color: rgb(255, 255, 255);
+    padding: 30px 0 0;
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+
+.nav-bottom {
+    height: 100vh; /* Увеличил для более мягкого перехода */
+    background: none;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+    margin-top: -1px; /* Чуть перекрывает границу */
+}
+
+.nav3.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* Контейнер */
+.nav-top {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.nav-top-store {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #ffffff;
+    gap: 80px;
+}
+
+.nav-top-store a {
+  display: block;
+  color: rgb(0, 0, 0);
+  font-size: 32px;
+  text-decoration: none;
+  padding: 4px 0;
+  transition: color 0.2s;
+}
+
+.nav-top-store a:hover {
+  color: #2997ff;
+}
+
+/*
+.nav-logo img {
+    height: 44px;
+    width: 44px;
+}
+*/
+
+.nav2{
+    color: rgb(0, 0, 0);
+    background-color: #1d1d1f;
+    height: 45px;
+    margin: auto;
+    width: 100vw;
+    padding-left: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    padding-top: 45px;
+}
+
+.nav2 a{
+    color: #2997ff;
+    padding: 5px;
+    text-decoration: none;
+}
+/* nav2 end */
+
+.subnav{
+    height: 100vh;
+    width: 100vw;
+    display: none;
+}
+
+.store-column {
+    min-width: 200px;
+}
+
+.store-column h4 {
+    margin: 0 0 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.store-column a {
+    display: block;
+    color: #000000;
+    font-size: 32px;
+    font-weight: 400;
+    padding: 4px 0;
+    text-decoration: none;
+    line-height: 1.4;
+    transition: color 0.2s;
+}
+
+.store-column a:hover {
+    color: #2997ff;
+}
+
+  .container{max-width:1200px;margin:0 auto;padding:28px 20px}
+  .page-header{padding:48px 0 6px;text-align:center}
+  .page-header h1{font-size:34px;margin:0;font-weight:600}
+  .subhead{color:var(--muted);margin-top:8px}
+
+  /* Filters */
+  .filters{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:26px 0 38px}
+  .filter-btn{border:1px solid #d6d6d6;background:#fff;padding:8px 18px;border-radius:999px;cursor:pointer;font-size:14px;transition:all .18s}
+  .filter-btn.active{background:#111;color:#fff;border-color:#111}
+
+  /* Grid */
+  .products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:36px;padding:0 10px 60px}
+  .card{text-align:center;cursor:pointer}
+  .card .imgwrap{background:#f8f8f8;border-radius:16px;padding:18px;display:flex;align-items:center;justify-content:center;min-height:200px;transition:transform .25s,box-shadow .25s}
+  .card img{max-width:100%;max-height:200px;border-radius:12px;display:block}
+  .card:hover .imgwrap{transform:translateY(-6px);box-shadow:0 10px 30px rgba(0,0,0,.08)}
+  .meta{margin-top:12px}
+  .meta .cat{font-size:13px;color:var(--muted)}
+  .meta h2{font-size:15px;margin:6px 0;font-weight:500}
+  .meta .price{color:#111;font-weight:600}
+
+  /* Modal */
+  .modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;padding:24px;z-index:1000}
+  .modal.open{display:flex}
+  .modal-content{width:100%;max-width:920px;background:#fff;border-radius:14px;padding:22px;position:relative;overflow:auto;max-height:90vh}
+  .modal-close{position:absolute;right:12px;top:12px;border:none;background:none;font-size:22px;cursor:pointer}
+  .product-detail{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+  .detail-image{background:#f7f7f7;border-radius:12px;padding:18px;display:flex;align-items:center;justify-content:center}
+  .detail-image img{max-width:100%;height:auto;border-radius:8px}
+  .detail-info h3{margin-top:0}
+  .colors{display:flex;gap:10px;margin:14px 0;flex-wrap:wrap}
+  .color-swatch{width:36px;height:36px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 0 rgba(0,0,0,.06);cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+  .color-swatch.selected{outline:3px solid rgba(0,0,0,.08);transform:scale(1.06)}
+  .buy-row{display:flex;gap:12px;margin-top:18px;align-items:center}
+  .btn{padding:10px 16px;border-radius:8px;border:1px solid #d6d6d6;background:#fff;cursor:pointer}
+  .btn.primary{background:#000;color:#fff;border-color:#000}
+  
+.accessories-hero {
+      
+      height: 700px;
+      background: #F5F5F7;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 120px;
+    }
+    .hero-img {
+      position: absolute;
+      top: 0; right: 0; bottom: 0;
+      width: 80%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center right;
+      pointer-events: none;
+    }
+    .hero-content {
+      
+      position: relative;
+      z-index: 2;
+      max-width: 1000px;
+      color: #1d1d1f;
+    }
+    .hero-content h1 {
+      font-size: 80px;
+      font-weight: 600;
+      line-height: 0.9;
+      letter-spacing: -2px;
+      margin-bottom: 24px;
+    }
+    .hero-content p {
+      font-size: 28px;
+      line-height: 1.4;
+      margin-bottom: 48px;
+      font-weight: 400;
+    }
+    .shop-links a {
+      display: block;
+      font-size: 24px;
+      color: #0071e3;
+      text-decoration: none;
+      margin-bottom: 16px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    .shop-links a:hover {
+      text-decoration: underline;
+    }
+    .search-section {
+      padding: 140px 40px;
+      background: white;
+      text-align: center;
+    }
+    .search-section h2 {
+      font-size: 56px;
+      color: #1d1d1f;
+      margin-bottom: 60px;
+    }
+    .search-bar {
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .search-bar input {
+      width: 100%;
+      padding: 20px 60px;
+      font-size: 21px;
+      border: 1px solid #d2d2d7;
+      border-radius: 12px;
+      background: #f5f5f7;
+      outline: none;
+    }
+    .search-bar i {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 24px;
+      color: #86868b;
+    }
+    .browse-all {
+      position: fixed;
+      top: 100px;
+      right: 40px;
+      font-size: 17px;
+      color: #1d1d1f;
+      text-decoration: none;
+      font-weight: 500;
+      z-index: 100;
+    }
+    .browse-all::after {
+      content: '↓';
+      margin-left: 8px;
+      font-size: 14px;
+    }
+
+.browse-section {
+  padding: 100px 40px;
+  background: #fff;
+  text-align: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.browse-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 60px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d2d2d7;
+}
+.browse-tabs a {
+  font-size: 21px;
+  color: #1d1d1f;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+.browse-tabs a.active {
+  color: #0071e3;
+}
+.browse-tabs a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -13px;
+  left: 0; right: 0;
+  height: 2px;
+  background: #0071e3;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 40px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.product-item {
+  text-decoration: none;
+  color: #1d1d1f;
+  transition: transform 0.4s ease;
+}
+.product-item:hover {
+  transform: translateY(-8px);
+}
+.icon-circle {
+  width: 120px;
+  height: 120px;
+  border: 1px solid #d2d2d7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+.product-item:hover .icon-circle {
+  border-color: #0071e3;
+  box-shadow: 0 10px 30px rgba(0,113,227,0.15);
+}
+.icon-circle i {
+  font-size: 48px;
+  color: #1d1d1f;
+}
+.product-item p {
+  font-size: 17px;
+  font-weight: 500;
+}
+.show-less {
+  display: block;
+  margin: 80px auto 0;
+  font-size: 19px;
+  color: #0071e3;
+  text-decoration: none;
+  font-weight: 500;
+}
+.show-less::after {
+  content: '↑';
+  margin-left: 8px;
+  font-size: 16px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 50px 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+.category-item {
+  text-decoration: none;
+  color: #1d1d1f;
+  text-align: center;
+  transition: transform 0.4s ease;
+}
+.category-item:hover {
+  transform: translateY(-10px);
+}
+.category-item .icon-circle {
+  width: 120px;
+  height: 120px;
+  border: 1px solid #d2d2d7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  background: #fff;
+  transition: all 0.4s ease;
+}
+.category-item:hover .icon-circle {
+  border-color: #0071e3;
+  box-shadow: 0 15px 35px rgba(0,113,227,0.2);
+  background: #f5f8ff;
+}
+.category-item i {
+  font-size: 48px;
+  color: #1d1d1f;
+}
+.category-item p {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.3;
+  max-width: 140px;
+  margin: 0 auto;
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 50px 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.product-item, .category-item {
+  text-align: center;
+  text-decoration: none;
+  color: #1d1d1f;
+  opacity: 1;
+  transition: all 0.4s ease;
+  display: block !important; /* Override inline style on load */
+}
+
+.show-less {
+  display: block;
+  margin: 80px auto 0;
+  font-size: 19px;
+  color: #0071e3;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 50px 20px;
+  max-width: 1300px;
+  margin: 40px auto 0;
+  padding: 0 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.grid-container.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.grid-item {
+  text-align: center;
+  text-decoration: none;
+  color: #1d1d1f;
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.grid-item:hover {
+  transform: translateY(-10px);
+}
+
+.grid-item .icon-circle {
+  width: 120px;
+  height: 120px;
+  border: 1px solid #d2d2d7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  background: #fff;
+  transition: all 0.4s ease;
+}
+
+.grid-item:hover .icon-circle {
+  border-color: #0071e3;
+  box-shadow: 0 15px 35px rgba(0,113,227,0.2);
+  background: #f5f8ff;
+}
+
+.grid-item i {
+  font-size: 48px;
+  color: #1d1d1f;
+}
+
+.grid-item p {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.3;
+  max-width: 140px;
+  margin: 0 auto;
+}
+
+.show-toggle {
+  display: block;
+  margin: 80px auto 0;
+  font-size: 19px;
+  color: #0071e3;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+}
+
+.show-toggle::after {
+  content: ' ↓';
+  font-size: 16px;
+}
+
+.show-toggle.collapsed::after {
+  content: ' ↑';
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grid-container { gap: 35px; }
+  .grid-item .icon-circle { width: 100px; height: 100px; }
+  .grid-item i { font-size: 36px; }
+  .grid-item p { font-size: 15px; }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .category-grid { gap: 40px; }
+  .category-item .icon-circle { width: 100px; height: 100px; }
+  .category-item i { font-size: 40px; }
+}
+@media (max-width: 768px) {
+  .category-grid { grid-template-columns: repeat(3, 1fr); gap: 35px; }
+  .category-item p { font-size: 15px; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .browse-tabs { gap: 30px; }
+  .browse-tabs a { font-size: 18px; }
+  .product-grid { grid-template-columns: repeat(3, 1fr); gap: 30px; }
+  .icon-circle { width: 100px; height: 100px; }
+  .icon-circle i { font-size: 36px; }
+}
+
+    @media (max-width: 1024px) {
+      .accessories-hero { padding-left: 60px; }
+      .hero-img { width: 80%; }
+      .hero-content h1 { font-size: 64px; }
+      .hero-content p { font-size: 24px; }
+    }
+    @media (max-width: 768px) {
+      .accessories-hero {
+        padding-left: 30px;
+        justify-content: center;
+        text-align: center;
+      }
+      .hero-img { width: 100%; left: 0; }
+      .hero-content { max-width: 90%; }
+      .hero-content h1 { font-size: 56px; }
+    }
+
+    .apple-shop-footer {
+  background: #f5f5f7;
+  padding: 34px 0 20px;
+  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.33337;
+  color: #6e6e73;
+  border-top: 1px solid #d2d2d7;
+}
+
+.footer-inner {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+.promo-section {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #d2d2d7;
+  margin-bottom: 17px;
+}
+
+.promo-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  max-width: 692px;
+  font-size: 12px;
+}
+
+.promo-block i {
+  font-size: 28px;
+  color: #1d1d1f;
+  line-height: 1;
+}
+
+.promo-block strong {
+  display: block;
+  color: #1d1d1f;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.promo-block p {
+  margin: 0 0 4px 0;
+  color: #6e6e73;
+}
+
+.link {
+  color: #0071e3;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.disclaimer {
+  text-align: center;
+  margin-bottom: 17px;
+  color: #86868b;
+  font-size: 12px;
+}
+
+.copyright-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.copyright-section p {
+  margin: 0;
+}
+
+.legal-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.legal-links a {
+  color: #515154;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.legal-links a:hover {
+  text-decoration: underline;
+}
+
+.country {
+  color: #1d1d1f;
+  font-weight: 500;
+}
+
+/* RESPONSIVE - MOBILE FIX */
+@media (max-width: 768px) {
+  .promo-block {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+  .promo-block i {
+    margin: 0 auto;
+  }
+  .copyright-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .legal-links {
+    gap: 15px;
+  }
+}
+</style>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<!-- Top navigation: copy the style from your index page so it fits visually -->
+<nav class="navbar">
+  <div class="nav-items">
+    <i class="ri-apple-fill"></i>
+    <div class="store-wrapper">
+      <a href="#" class="Store">Store</a>
+
+      <div class="nav3">
+        <div class="nav-top">
+          <div class="nav-top-store">
+            <div class="store-column">
+              <h4>Shop</h4>
+              <a href="#">Shop the Latest</a>
+              <a href="mac.html">Mac</a>
+              <a href="iPad.html">iPad</a>
+              <a href="#">iPhone</a>
+              <a href="watch.html">Apple Watch</a>
+              <a href="#">Accessories</a>
+            </div>
+            <div class="store-column">
+              <h4>Quick Links</h4>
+              <a href="#">Find a Store</a>
+              <a href="#">Order Status</a>
+              <a href="#">Ways To Buy</a>
+            </div>
+            <div class="store-column">
+              <h4>Shop Special Stores</h4>
+              <a href="#">Education</a>
+              <a href="#">Business</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-bottom"></div>
+      </div>
+    </div>
+    <div class="store-wrapper">
+    <a href="mac.html" class="Mac">Mac</a>
+        <div id="mac-menu-template" style="display: none;">
+        <div class="nav-top">
+          <div class="nav-top-store">
+            <div class="store-column">
+        <h4>Explore Mac</h4>
+        <a href="mac.html">Explore All Mac</a>
+        <a href="mac.html">MacBook Air</a>
+        <a href="mac.html">MacBook Pro</a>
+        <a href="mac.html">iMac</a>
+        <a href="mac.html">Mac Studio</a>
+        <a href="mac.html">Mac Pro</a>
+        <a href="mac.html">Displays</a>
+        <a href="mac.html" class="small">Compare Mac</a>
+        <a href="mac.html" class="small">Switch from PC to Mac</a>
+      </div>
+
+      <!-- Shop Mac -->
+      <div class="store-column">
+        <h4>Shop Mac</h4>
+        <a href="mac.html">Shop Mac</a>
+        <a href="mac.html">Help Me Choose</a>
+        <a href="mac.html">Mac Accessories</a>
+        <a href="mac.html">Apple Trade In</a>
+        <a href="mac.html">Financing</a>
+      </div>
+
+      <!-- More from Mac -->
+      <div class="store-column">
+        <h4>More from Mac</h4>
+        <a href="#">Mac Support</a>
+        <a href="#">AppleCare</a>
+        <a href="#">macOS Tahoe</a>
+        <a href="#">Apple Intelligence</a>
+        <a href="#">Apps by Apple</a>
+        <a href="#">Better with iPhone</a>
+        <a href="#">iCloud+</a>
+        <a href="#">Mac for Business</a>
+        <a href="#">Education</a>
+      </div>
+          </div>
+        </div>
+        <div class="nav-bottom"></div>
+      </div>
+    </div>
+    <a href="iPad.html">iPad</a>
+    <div id="ipad-menu-template" style="display: none;">
+  <div class="nav-top">
+    <div class="nav-top-store">
+      <div class="store-column">
+        <h4>Explore iPad</h4>
+        <a href="iPad.html">Explore All iPad</a>
+        <a href="iPad.html">iPad Pro</a>
+        <a href="iPad.html">iPad Air</a>
+        <a href="iPad.html">iPad (10th generation)</a>
+        <a href="iPad.html">iPad mini</a>
+        <a href="iPad.html">Compare iPad</a>
+      </div>
+      <div class="store-column">
+        <h4>Shop iPad</h4>
+        <a href="iPad.html">Shop iPad</a>
+        <a href="iPad.html">iPad Accessories</a>
+        <a href="iPad.html">Apple Pencil</a>
+        <a href="iPad.html">Apple Trade In</a>
+        <a href="iPad.html">Financing</a>
+      </div>
+      <div class="store-column">
+        <h4>More from iPad</h4>
+        <a href="iPad.html">iPad Support</a>
+        <a href="iPad.html">AppleCare</a>
+        <a href="iPad.html">iPadOS</a>
+        <a href="iPad.html">Apps by Apple</a>
+        <a href="iPad.html">Better with iPhone</a>
+        <a href="iPad.html">iPad for Business</a>
+        <a href="iPad.html">Education</a>
+      </div>
+    </div>
+  </div>
+  <div class="nav-bottom"></div>
+</div>
+    <a href="#">iPhone</a>
+    <div id="iphone-menu-template" style="display: none;">
+  <div class="nav-top">
+    <div class="nav-top-store">
+      <div class="store-column">
+        <h4>Explore iPhone</h4>
+        <a href="#">Explore All iPhone</a>
+        <a href="#">iPhone 15 Pro</a>
+        <a href="#">iPhone 15</a>
+        <a href="#">iPhone 14</a>
+        <a href="#">iPhone SE</a>
+        <a href="#">Compare iPhone</a>
+      </div>
+      <div class="store-column">
+        <h4>Shop iPhone</h4>
+        <a href="#">Shop iPhone</a>
+        <a href="#">iPhone Accessories</a>
+        <a href="#">Cases & Protection</a>
+        <a href="#">Apple Trade In</a>
+        <a href="#">Financing</a>
+      </div>
+      <div class="store-column">
+        <h4>More from iPhone</h4>
+        <a href="#">iPhone Support</a>
+        <a href="#">AppleCare</a>
+        <a href="#">iOS</a>
+        <a href="#">Apple Intelligence</a>
+        <a href="#">Apps by Apple</a>
+        <a href="#">Better with Mac</a>
+        <a href="">iCloud+</a>
+      </div>
+    </div>
+  </div>
+  <div class="nav-bottom"></div>
+</div>
+    <a href="watch.html">Watch</a>
+    <div id="watch-menu-template" style="display: none;">
+  <div class="nav-top">
+    <div class="nav-top-store">
+      <div class="store-column">
+        <h4>Explore Apple Watch</h4>
+        <a href="watch.html">Explore All Apple Watch</a>
+        <a href="watch.html">Apple Watch Series 10</a>
+        <a href="watch.html">Apple Watch Ultra 2</a>
+        <a href="watch.html">Apple Watch SE</a>
+        <a href="watch.html">Compare Apple Watch</a>
+      </div>
+      <div class="store-column">
+        <h4>Shop Apple Watch</h4>
+        <a href="watch.html">Shop Apple Watch</a>
+        <a href="watch.html">Apple Watch Bands</a>
+        <a href="watch.html">Apple Watch Accessories</a>
+        <a href="watch.html">Apple Trade In</a>
+        <a href="watch.html">Financing</a>
+      </div>
+      <div class="store-column">
+        <h4>More from Apple Watch</h4>
+        <a href="#">Apple Watch Support</a>
+        <a href="#">AppleCare</a>
+        <a href="#">watchOS</a>
+        <a href="#">Apps by Apple</a>
+        <a href="#">Better with iPhone</a>
+        <a href="">Health on Apple Watch</a>
+      </div>
+    </div>
+  </div>
+  <div class="nav-bottom"></div>
+</div>
+    <a href="#">AirPods</a>
+    <div id="airpods-menu-template" style="display: none;">
+  <div class="nav-top">
+    <div class="nav-top-store">
+      <div class="store-column">
+        <h4>Explore AirPods</h4>
+        <a href="#">Explore All AirPods</a>
+        <a href="#">AirPods Pro 2</a>
+        <a href="#">AirPods 4</a>
+        <a href="#">AirPods Max</a>
+        <a href="#">Compare AirPods</a>
+      </div>
+      <div class="store-column">
+        <h4>Shop AirPods</h4>
+        <a href="#">Shop AirPods</a>
+        <a href="#">AirPods Accessories</a>
+        <a href="#">Cases & Protection</a>
+        <a href="#">Apple Trade In</a>
+        <a href="#">Financing</a>
+      </div>
+      <div class="store-column">
+        <h4>More from AirPods</h4>
+        <a href="#">AirPods Support</a>
+        <a href="#">AppleCare</a>
+        <a href="#">Apple Music</a>
+        <a href="#">Apps by Apple</a>
+        <a href="">Better with iPhone</a>
+      </div>
+    </div>
+  </div>
+  <div class="nav-bottom"></div>
+</div>
+    <a href="#">TV & Home</a>
+    <div id="tv-menu-template" style="display: none;">
+  <div class="nav-top">
+    <div class="nav-top-store">
+      <div class="store-column">
+        <h4>Explore TV & Home</h4>
+        <a href="#">Explore All TV & Home</a>
+        <a href="#">Apple TV 4K</a>
+        <a href="#">HomePod</a>
+        <a href="#">HomePod mini</a>
+        <a href="#">Compare</a>
+      </div>
+      <div class="store-column">
+        <h4>Shop TV & Home</h4>
+        <a href="#">Shop Apple TV</a>
+        <a href="#">Shop HomePod</a>
+        <a href="#">Apple Trade In</a>
+        <a href="#">Financing</a>
+      </div>
+      <div class="store-column">
+        <h4>More from TV & Home</h4>
+        <a href="#">Apple TV Support</a>
+        <a href="#">AppleCare</a>
+        <a href="#">Apple TV+</a>
+        <a href="#">Apps by Apple</a>
+        <a href="">Better with iPhone</a>
+      </div>
+    </div>
+  </div>
+  <div class="nav-bottom"></div>
+</div>
+    <a href="#">Entertainment</a>
+    <div id="entertainment-menu-template" style="display: none;">
+  <div class="nav-top">
+    <div class="nav-top-store">
+      <div class="store-column">
+        <h4>Entertainment</h4>
+        <a href="#">Apple One</a>
+        <a href="#">Apple TV+</a>
+        <a href="#">Apple Music</a>
+        <a href="#">Apple Arcade</a>
+        <a href="#">Apple Books</a>
+        <a href="#">Apple Fitness+</a>
+        <a href="#">Apple News+</a>
+      </div>
+      <div class="store-column">
+        <h4>Shop & Learn</h4>
+        <a href="#">Apple Store App</a>
+        <a href="#">Apple Store Gift Cards</a>
+        <a href="#">AppleCare</a>
+      </div>
+      <div class="store-column">
+        <h4>Support</h4>
+        <a href="#">AppleCare</a>
+        <a href="#">Apple Support</a>
+        <a href="#">Manage Your Apple ID</a>
+      </div>
+    </div>
+  </div>
+  <div class="nav-bottom"></div>
+</div>
+    <a href="#">Accessories</a>
+    <div id="accessories-menu-template" style="display: none;">
+  <div class="nav-top">
+    <div class="nav-top-store">
+      <div class="store-column">
+        <h4>Shop by Category</h4>
+        <a href="#">Cases & Protection</a>
+        <a href="#">Apple Watch Bands</a>
+        <a href="#">Chargers & Cables</a>
+        <a href="#">Power & Batteries</a>
+        <a href="#">Audio & Video</a>
+        <a href="#">Bags & Backpacks</a>
+        <a href="#">Car Accessories</a>
+      </div>
+      <div class="store-column">
+        <h4>Shop by Product</h4>
+        <a href="#">iPhone Accessories</a>
+        <a href="#">iPad Accessories</a>
+        <a href="#">Mac Accessories</a>
+        <a href="#">Apple Watch Accessories</a>
+        <a href="#">AirPods Accessories</a>
+      </div>
+      <div class="store-column">
+        <h4>More</h4>
+        <a href="#">Apple Trade In</a>
+        <a href="#">Financing</a>
+        <a href="">Gift Cards</a>
+      </div>
+    </div>
+  </div>
+  <div class="nav-bottom"></div>
+</div>
+    <a href="registration.html">Support</a>
+    <div id="support-menu-template" style="display: none;">
+  <div class="nav-top">
+    <div class="nav-top-store">
+      <div class="store-column">
+        <h4>Support</h4>
+        <a href="#">Apple Support App</a>
+        <a href="#">Genius Bar</a>
+        <a href="#">Today at Apple</a>
+        <a href="#">Apple Support Communities</a>
+        <a href="#">AppleCare</a>
+      </div>
+      <div class="store-column">
+        <h4>Account</h4>
+        <a href="#">Manage Your Apple ID</a>
+        <a href="#">Apple Store Account</a>
+        <a href="#">iCloud.com</a>
+      </div>
+      <div class="store-column">
+        <h4>Services</h4>
+        <a href="#">Apple Trade In</a>
+        <a href="#">Recycling Program</a>
+        <a href="">Ways to Buy</a>
+      </div>
+    </div>
+  </div>
+    <div class="nav-bottom"></div>
+</div>
+
+    <i class="ri-search-line"></i>
+    <i class="ri-shopping-bag-line"></i>
+  </div>
+</nav>
+
+
+  <div class="accessories-hero" data-scroll data-scroll-speed="-0.2">
+    <img src="aalp-magsafe-strap-header-202509.jpg" 
+         alt="Meet your match" class="hero-img">
+
+    <div class="hero-content">
+      <h1>Meet your<br>match.</h1>
+      <p>Pair your iPhone with a case,<br>wallet, or Crossbody Strap in<br>fresh new textures and colors.</p>
+      <div class="shop-links">
+        <a href="#">Shop MagSafe ></a>
+        <a href="#">Shop Crossbody Straps ></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Section -->
+  <div class="search-section">
+    <h2>Find the accessories you’re looking for.</h2>
+    <div class="search-bar">
+      <i class="ri-search-line"></i>
+      <input type="text" placeholder="Search accessories">
+    </div>
+  </div>
+
+  <a href="#" class="browse-all">Browse all</a>
+
+
+  html<!-- Browse by Product / Category Section (FULL 2025 VERSION) -->
+<!-- BROWSE SECTION - FULLY INTERACTIVE (Apple.com 2025) -->
+<div class="browse-section">
+  <div class="browse-tabs">
+    <a href="#" data-tab="product">Browse by Product</a>
+    <a href="#" data-tab="category" class="active">Browse by Category</a>
+  </div>
+
+  <!-- Grid Container (JS will fill this) -->
+  <div class="grid-container"></div>
+
+  <a href="#" class="show-toggle">Show more ↓</a>
+</div>
+
+  <!-- Filters -->
+  <div class="filters" id="filters">
+    <!-- data-cat values must match product-card data-category values -->
+    <button class="filter-btn active" data-cat="all">All</button>
+    <button class="filter-btn" data-cat="iphone">iPhone</button>
+    <button class="filter-btn" data-cat="ipad">iPad</button>
+    <button class="filter-btn" data-cat="mac">Mac</button>
+    <button class="filter-btn" data-cat="watch">Watch</button>
+    <button class="filter-btn" data-cat="airpods">AirPods</button>
+    <button class="filter-btn" data-cat="audio">Audio</button>
+    <button class="filter-btn" data-cat="power">Power</button>
+    <button class="filter-btn" data-cat="cases">Cases</button>
+  </div>
+
+  <!-- Products grid -->
+  <div class="products-grid" id="grid">
+
+    <!-- Template for product card.
+         For each product replace the comments in the img src and for color images in modal below.
+         Keep data attributes: data-id, data-category.
+         Example data-id: p001, p002, etc.
+    -->
+
+    <!-- ===== PRODUCT 1 ===== -->
+    <!-- FULL PRODUCT GRID - 30 REAL APPLE ACCESSORIES WITH CORRECT IMAGES -->
+
+  
+  <!-- P001 - Silicone Case with MagSafe -->
+  <div class="card product-card" data-id="p001" data-category="iphone">
+    <div class="imgwrap">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQDU3?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1722292673000" alt="Silicone Case - Black" />
+    </div>
+    <div class="meta">
+      <div class="cat">Cases & Protection</div>
+      <h2>Silicone Case with MagSafe</h2>
+      <div class="price">$49.00</div>
+    </div>
+  </div>
+
+  <!-- P002 - Crossbody Strap -->
+  <div class="card product-card" data-id="p002" data-category="iphone">
+    <div class="imgwrap">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MXMW3?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1722292673000" alt="Crossbody Strap - Tan" />
+    </div>
+    <div class="meta">
+      <div class="cat">Accessories</div>
+      <h2>Crossbody Strap</h2>
+      <div class="price">$59.00</div>
+    </div>
+  </div>
+
+  <!-- P003 - Sport Band – Storm Blue -->
+  <div class="card product-card" data-id="p003" data-category="watch">
+    <div class="imgwrap">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MXU33?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1722292673000" alt="Sport Band - Storm Blue" />
+    </div>
+    <div class="meta">
+      <div class="cat">Bands</div>
+      <h2>Sport Band – Storm Blue</h2>
+      <div class="price">$49.00</div>
+    </div>
+  </div>
+
+  <!-- P004 - AirPods Pro -->
+  <div class="card product-card" data-id="p004" data-category="airpods">
+    <div class="imgwrap">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-pro-3-hero-select-202509?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1722292673000" alt="AirPods Pro" />
+    </div>
+    <div class="meta">
+      <div class="cat">Audio</div>
+      <h2>AirPods Pro</h2>
+      <div class="price">$249.00</div>
+    </div>
+  </div>
+
+  <!-- P005 - Magic Keyboard with Touch ID -->
+  <div class="card product-card" data-id="p005" data-category="mac">
+    <div class="imgwrap">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MXK83?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1722292673000" alt="Magic Keyboard" />
+    </div>
+    <div class="meta">
+      <div class="cat">Keyboards</div>
+      <h2>Magic Keyboard with Touch ID</h2>
+      <div class="price">$149.00</div>
+    </div>
+  </div>
+
+  <!-- P006 - Apple Pencil (2nd generation) -->
+  <div class="card product-card" data-id="p006" data-category="ipad">
+    <div class="imgwrap">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MU8F2?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1722292673000" alt="Apple Pencil" />
+    </div>
+    <div class="meta">
+      <div class="cat">Stylus</div>
+      <h2>Apple Pencil (2nd generation)</h2>
+      <div class="price">$129.00</div>
+    </div>
+  </div>
+
+  <!-- P007 - MagSafe Charger -->
+  <div class="card product-card" data-id="p007" data-category="power">
+    <div class="imgwrap">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MHXH3?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1722292673000" alt="MagSafe Charger" />
+    </div>
+    <div class="meta">
+      <div class="cat">Power</div>
+      <h2>MagSafe Charger (1 m)</h2>
+      <div class="price">$39.00</div>
+    </div>
+  </div>
+
+  <!-- P008 - Beats Studio Pro -->
+  <div class="card product-card" data-id="p008" data-category="audio">
+    <div class="imgwrap">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQTR3?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1722292673000" alt="Beats Studio Pro" />
+    </div>
+    <div class="meta">
+      <div class="cat">Audio</div>
+      <h2>Beats Studio Pro</h2>
+      <div class="price">$349.99</div>
+    </div>
+  </div>
+
+  <!-- P009 - Clear Case with MagSafe -->
+  <div class="card product-card" data-id="p009" data-category="cases">
+    <div class="imgwrap">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQ0G3?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1722292673000" alt="Clear Case" />
+    </div>
+    <div class="meta">
+      <div class="cat">Cases</div>
+      <h2>Clear Case with MagSafe</h2>
+      <div class="price">$49.00</div>
+    </div>
+  </div>
+
+  <!-- P010 - USB-C Hub -->
+  <div class="card product-card" data-id="p010" data-category="mac">
+    <div class="imgwrap">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/HMUB2?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1722292673000" alt="USB-C Hub" />
+    </div>
+    <div class="meta">
+      <div class="cat">Accessories</div>
+      <h2>USB-C Hub for MacBook</h2>
+      <div class="price">$79.00</div>
+    </div>
+  </div>
+
+  <!-- P011 - Smart Folio for iPad -->
+  <div class="card product-card" data-id="p011" data-category="ipad">
+    <div class="imgwrap">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MJMK3?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1722292673000" alt="Smart Folio" />
+    </div>
+    <div class="meta">
+      <div class="cat">Covers</div>
+      <h2>Smart Folio for iPad</h2>
+      <div class="price">$79.00</div>
+    </div>
+  </div>
+
+  <!-- P012 - Milanese Loop -->
+  <div class="card product-card" data-id="p012" data-category="watch">
+    <div class="imgwrap">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MWRL3?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1722292673000" alt="Milanese Loop" />
+    </div>
+    <div class="meta">
+      <div class="cat">Bands</div>
+      <h2>Milanese Loop</h2>
+      <div class="price">$99.00</div>
+    </div>
+  </div>
+
+  <!-- P013 - AirPods Max -->
+  <div class="card product-card" data-id="p013" data-category="airpods">
+    <div class="imgwrap">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MGYJ3?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1722292673000" alt="AirPods Max" />
+    </div>
+    <div class="meta">
+      <div class="cat">Audio</div>
+      <h2>AirPods Max</h2>
+      <div class="price">$549.00</div>
+    </div>
+  </div>
+
+  <!-- P014 - 240W USB-C Charge Cable -->
+  <div class="card product-card" data-id="p014" data-category="power">
+    <div class="imgwrap">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MW5K3?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1722292673000" alt="240W Cable" />
+    </div>
+    <div class="meta">
+      <div class="cat">Cables</div>
+      <h2>240W USB-C Charge Cable</h2>
+      <div class="price">$29.00</div>
+    </div>
+  </div>
+
+  <!-- P015 - Rugged Case -->
+  <div class="card product-card" data-id="p015" data-category="cases">
+    <div class="imgwrap">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQDY3?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1722292673000" alt="Rugged Case" />
+    </div>
+    <div class="meta">
+      <div class="cat">Cases</div>
+      <h2>Rugged Case with MagSafe</h2>
+      <div class="price">$79.00</div>
+    </div>
+  </div>
+
+  <!-- P016 - Nimble 3-in-1 Charger -->
+  <div class="card product-card" data-id="p016" data-category="audio">
+    <div class="imgwrap">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/HMTC2?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1722292673000" alt="Nimble Charger" />
+    </div>
+    <div class="meta">
+      <div class="cat">Power</div>
+      <h2>Nimble 3-in-1 Wireless Charger</h2>
+      <div class="price">$139.95</div>
+    </div>
+  </div>
+
+  <!-- P017 - Magic Mouse (USB-C) -->
+  <div class="card product-card" data-id="p017" data-category="mac">
+    <div class="imgwrap">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MK2A3?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1722292673000" alt="Magic Mouse" />
+    </div>
+    <div class="meta">
+      <div class="cat">Accessories</div>
+      <h2>Magic Mouse (USB-C)</h2>
+      <div class="price">$99.00</div>
+    </div>
+  </div>
+
+  <!-- P018 - Magic Keyboard Folio -->
+  <div class="card product-card" data-id="p018" data-category="ipad">
+    <div class="imgwrap">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MJMK3?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1722292673000" alt="Magic Keyboard Folio" />
+    </div>
+    <div class="meta">
+      <div class="cat">Keyboards</div>
+      <h2>Magic Keyboard Folio</h2>
+      <div class="price">$249.00</div>
+    </div>
+  </div>
+
+  <!-- P019 - Trail Loop -->
+  <div class="card product-card" data-id="p019" data-category="watch">
+    <div class="imgwrap">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MXU43?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1722292673000" alt="Trail Loop" />
+    </div>
+    <div class="meta">
+      <div class="cat">Bands</div>
+      <h2>Trail Loop</h2>
+      <div class="price">$99.00</div>
+    </div>
+  </div>
+
+  <!-- P020 - HomePod mini -->
+  <div class="card product-card" data-id="p020" data-category="airpods">
+    <div class="imgwrap">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MY5G2?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1722292673000" alt="HomePod mini" />
+    </div>
+    <div class="meta">
+      <div class="cat">Home</div>
+      <h2>HomePod mini</h2>
+      <div class="price">$99.00</div>
+    </div>
+  </div>
+
+  <!-- P021 - 70W USB-C Power Adapter -->
+  <div class="card product-card" data-id="p021" data-category="power">
+    <div class="imgwrap">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MW5K3?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1722292673000" alt="70W Adapter" />
+    </div>
+    <div class="meta">
+      <div class="cat">Power</div>
+      <h2>70W USB-C Power Adapter</h2>
+      <div class="price">$59.00</div>
+    </div>
+  </div>
+
+  <!-- P022 - Studio Display -->
+  <div class="card product-card" data-id="p022" data-category="mac">
+    <div class="imgwrap">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MK0U3?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1722292673000" alt="Studio Display" />
+    </div>
+    <div class="meta">
+      <div class="cat">Displays</div>
+      <h2>Studio Display</h2>
+      <div class="price">$1599.00</div>
+    </div>
+  </div>
+
+  <!-- P023 - Polishing Cloth -->
+  <div class="card product-card" data-id="p023" data-category="cases">
+    <div class="imgwrap">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MM6F3?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1722292673000" alt="Polishing Cloth" />
+    </div>
+    <div class="meta">
+      <div class="cat">Accessories</div>
+      <h2>Polishing Cloth</h2>
+      <div class="price">$19.00</div>
+    </div>
+  </div>
+
+  <!-- P024 - Powerbeats Pro 2 -->
+  <div class="card product-card" data-id="p024" data-category="audio">
+    <div class="imgwrap">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQXP3?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1722292673000" alt="Powerbeats Pro 2" />
+    </div>
+    <div class="meta">
+      <div class="cat">Audio</div>
+      <h2>Powerbeats Pro 2</h2>
+      <div class="price">$249.99</div>
+    </div>
+  </div>
+
+  <!-- P025 - Smart Folio for iPad mini -->
+  <div class="card product-card" data-id="p025" data-category="ipad">
+    <div class="imgwrap">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MJMG3?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1722292673000" alt="Smart Folio Mini" />
+    </div>
+    <div class="meta">
+      <div class="cat">Covers</div>
+      <h2>Smart Folio for iPad mini</h2>
+      <div class="price">$59.00</div>
+    </div>
+  </div>
+
+  <!-- P026 - Thunderbolt 5 Pro Cable -->
+  <div class="card product-card" data-id="p026" data-category="mac">
+    <div class="imgwrap">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MW5L3?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1722292673000" alt="Thunderbolt Cable" />
+    </div>
+    <div class="meta">
+      <div class="cat">Cables</div>
+      <h2>Thunderbolt 5 Pro Cable</h2>
+      <div class="price">$69.00</div>
+    </div>
+  </div>
+
+  <!-- P027 - Hermès Band -->
+  <div class="card product-card" data-id="p027" data-category="watch">
+    <div class="imgwrap">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MXU53?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1722292673000" alt="Hermès Band" />
+    </div>
+    <div class="meta">
+      <div class="cat">Bands</div>
+      <h2>Hermès - Grand H</h2>
+      <div class="price">$1099.00</div>
+    </div>
+  </div>
+
+  <!-- P028 - Beats Flex -->
+  <div class="card product-card" data-id="p028" data-category="audio">
+    <div class="imgwrap">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYMC3?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1722292673000" alt="Beats Flex" />
+    </div>
+    <div class="meta">
+      <div class="cat">Audio</div>
+      <h2>Beats Flex</h2>
+      <div class="price">$69.99</div>
+    </div>
+  </div>
+
+  <!-- P029 - TechWoven Case -->
+  <div class="card product-card" data-id="p029" data-category="cases">
+    <div class="imgwrap">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQDV3?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1722292673000" alt="TechWoven Case" />
+    </div>
+    <div class="meta">
+      <div class="cat">Cases</div>
+      <h2>TechWoven Case with MagSafe</h2>
+      <div class="price">$59.00</div>
+    </div>
+  </div>
+
+  <!-- P030 - USB-C to MagSafe 3 Cable -->
+  <div class="card product-card" data-id="p030" data-category="power">
+    <div class="imgwrap">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MW5K3?wid=400&hei=400&fmt=jpeg&qlt=95&.v=1722292673000" alt="MagSafe Cable" />
+    </div>
+    <div class="meta">
+      <div class="cat">Cables</div>
+      <h2>USB-C to MagSafe 3 Cable (2 m)</h2>
+      <div class="price">$49.00</div>
+    </div>
+  </div>
+
+
+
+<!-- Modal for product details with color choices -->
+<div class="modal" id="productModal" aria-hidden="true">
+  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" title="Close">✕</button>
+    <div class="product-detail">
+      <div class="detail-image">
+        <!-- Main image shown for selected color. We will swap this src in JS. -->
+        <img id="detailImage" src="" alt="Product detail image" />
+      </div>
+      <div class="detail-info">
+        <h3 id="modalTitle">Product name</h3>
+        <div class="cat" id="modalCategory">Category</div>
+        <div class="price" id="modalPrice" style="font-weight:700;margin-top:8px">$0.00</div>
+
+        <div style="margin-top:14px">
+          <strong>Choose a color</strong>
+          <div class="colors" id="colorList">
+            <!-- Color swatches injected by JS; each swatch should have data-image attributes for the color image -->
+          </div>
+        </div>
+
+        <div class="buy-row">
+          <button class="btn primary" id="addToCart">Add to Bag</button>
+          <button class="btn" id="viewDetails">View details</button>
+        </div>
+
+        <div style="margin-top:10px;color:var(--muted);font-size:13px">
+          <em>Note: replace the placeholder image paths and provide one image per color variant. See comments in HTML.</em>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- OFFICIAL 2025 APPLE SHOP ACCESSORIES FOOTER - EXACT MATCH -->
+<footer class="apple-shop-footer">
+  <div class="footer-inner">
+
+    <!-- TOP PROMO BAR - TRUCK ICON + TEXT -->
+    <div class="promo-section">
+      <div class="promo-block">
+        <i class="ri-truck-line"></i>
+        <div>
+          <strong>Fast delivery or pickup</strong>
+          <p>Enjoy two-hour delivery from an Apple Store, free delivery, or easy pickup.</p>
+        </div>
+        <a href="#" class="link">Learn more</a>
+      </div>
+    </div>
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer">
+      <p>Fast, free delivery and easy pickup available on eligible products.</p>
+    </div>
+
+    <!-- COPYRIGHT + LEGAL LINKS -->
+    <div class="copyright-section">
+      <p>Copyright © 2025 Apple Inc. All rights reserved.</p>
+      <div class="legal-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Sales and Refunds</a>
+        <a href="#">Legal</a>
+        <a href="#">Site Map</a>
+      </div>
+      <p class="country">United States</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Simple filtering
+document.querySelectorAll('.filter-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const cat = btn.getAttribute('data-cat');
+    document.querySelectorAll('.product-card').forEach(card=>{
+      if(cat === 'all' || card.getAttribute('data-category') === cat) card.style.display = '';
+      else card.style.display = 'none';
+    });
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+});
+
+// Preload default images (if data-src-default set)
+document.querySelectorAll('.product-card img').forEach(img=>{
+  const def = img.getAttribute('data-src-default');
+  if(def){ /* we intentionally leave src empty so developer can set images; if you want auto-load, uncomment next line */
+    // img.src = def;
+  }
+});
+
+// Modal logic and color switching
+const modal = document.getElementById('productModal');
+const detailImage = document.getElementById('detailImage');
+const modalTitle = document.getElementById('modalTitle');
+const modalCategory = document.getElementById('modalCategory');
+const modalPrice = document.getElementById('modalPrice');
+const colorList = document.getElementById('colorList');
+const modalClose = document.getElementById('modalClose');
+
+// Product data map - developer: replace image placeholders with real paths for each color for each product id.
+// Format: products['p001'] = { title, category, price, variants: [{name:'Black', image:'images/p001-black.jpg'}, ...] }
+const products = {
+  "p001":{
+    title:"Silicone Case with MagSafe",
+    category:"Cases & Protection",
+    price:"$49.00",
+    variants:[
+      {name:"Black", image:""}, // TODO: insert path for p001 Black
+      {name:"Frost", image:""}, // TODO: insert path for p001 Frost
+      {name:"Purple Fog", image:""} // TODO: insert path for p001 Purple Fog
+    ]
+  },
+  "p002":{
+    title:"Crossbody Strap",
+    category:"Accessories",
+    price:"$59.00",
+    variants:[
+      {name:"Tan", image:""}, // TODO: insert path for p002 Tan
+      {name:"Purple", image:""} // TODO: insert path for p002 Purple
+    ]
+  },
+  "p003":{
+    title:"Sport Band – Storm Blue",
+    category:"Bands",
+    price:"$49.00",
+    variants:[
+      {name:"Storm Blue", image:""}, // TODO p003
+      {name:"Black", image:""} // TODO p003
+    ]
+  },
+  "p004":{
+    title:"AirPods Pro",
+    category:"Audio",
+    price:"$249.00",
+    variants:[
+      {name:"White", image:""} // TODO p004
+    ]
+  },
+  // ... other products (p005..p030) follow same structure
+};
+
+// Populate modal color swatches and image when clicking a product
+document.querySelectorAll('.product-card').forEach(card=>{
+  card.addEventListener('click',()=>{
+    const id = card.getAttribute('data-id');
+    const data = products[id];
+    if(!data) {
+      // If product details missing in `products` object, create a basic default view using card's html
+      modalTitle.textContent = card.querySelector('.meta h2').textContent;
+      modalCategory.textContent = card.querySelector('.meta .cat').textContent;
+      modalPrice.textContent = card.querySelector('.meta .price').textContent;
+      detailImage.src = card.querySelector('img').getAttribute('data-src-default') || '';
+      colorList.innerHTML = '<div style="color:var(--muted)">No color variants defined. Edit the `products` JS object in the HTML to add them.</div>';
+      modal.classList.add('open');
+      return;
+    }
+    modalTitle.textContent = data.title;
+    modalCategory.textContent = data.category;
+    modalPrice.textContent = data.price;
+    // Build swatches
+    colorList.innerHTML = '';
+    data.variants.forEach((v,idx)=>{
+      const sw = document.createElement('button');
+      sw.className = 'color-swatch';
+      sw.type = 'button';
+      sw.title = v.name;
+      // We allow the developer to set background using inline style or image
+      // TODO: replace example background colors with real color values if desired
+      sw.style.background = '#eee';
+      sw.setAttribute('data-image', v.image || '');
+      sw.textContent = ''; // keep empty for clean swatch
+      if(idx===0) sw.classList.add('selected');
+      sw.addEventListener('click', ()=>{
+        document.querySelectorAll('.color-swatch').forEach(s=>s.classList.remove('selected'));
+        sw.classList.add('selected');
+        const img = sw.getAttribute('data-image');
+        if(img) detailImage.src = img;
+        else detailImage.src = card.querySelector('img').getAttribute('data-src-default') || '';
+      });
+      colorList.appendChild(sw);
+    });
+    // Set initial image
+    const firstImg = data.variants[0] && data.variants[0].image ? data.variants[0].image : (card.querySelector('img').getAttribute('data-src-default') || '');
+    detailImage.src = firstImg;
+    modal.classList.add('open');
+  });
+});
+
+// Close modal
+modalClose.addEventListener('click',()=> modal.classList.remove('open'));
+modal.addEventListener('click', (e)=>{ if(e.target===modal) modal.classList.remove('open') });
+
+// Developer helper instructions in console for quick editing
+console.info("ACCESSORIES PAGE: To finish, open this HTML and replace all TODO comments and set product variant image paths inside the `products` JavaScript object. For example products['p001'].variants[0].image = 'images/p001-black.jpg'");
+</script>
+<script>
+   $(document).ready(function () {
+  
+  const $navItems = $('.nav-items a'); 
+  const $nav3 = $('.nav3');
+  let hoverTimer;
+  let currentMenu = '';
+
+  
+  const templates = {
+    'Store': $('#store-menu-template').html() || $nav3.html(), 
+    'Mac': $('#mac-menu-template').html(),
+    'iPad': $('#ipad-menu-template').html(),
+    'iPhone': $('#iphone-menu-template').html(),
+    'Watch': $('#watch-menu-template').html(),
+    'AirPods': $('#airpods-menu-template').html(),
+    'TV & Home': $('#tv-menu-template').html(),
+    'Entertainment': $('#entertainment-menu-template').html(),
+    'Accessories': $('#accessories-menu-template').html(),
+    'Support': $('#support-menu-template').html()
+  };
+
+  
+  $navItems.on('mouseenter', function () {
+    const text = $(this).text().trim();
+    const template = templates[text];
+    $('.nav3').slideDown(); 
+
+    if (template) {
+      clearTimeout(hoverTimer);
+      $nav3.html(template).addClass('open');
+      currentMenu = text;
+    }
+  });
+
+  
+  $navItems.on('mouseleave', function () {
+    
+    hoverTimer = setTimeout(() => {
+      $nav3.removeClass('open').empty();
+      currentMenu = '';
+    }, 400);
+  });
+
+  
+  $nav3.on('mouseenter', function () {
+    $('.nav3').slideDown();
+    clearTimeout(hoverTimer);
+  });
+
+  $nav3.on('mouseleave', function () {
+     $('.nav3').slideUp();
+    hoverTimer = setTimeout(() => {
+      $nav3.removeClass('open').empty();
+      currentMenu = '';
+    }, 300);
+  });
+});
+
+// Subtle image parallax
+    gsap.to(".hero-img", {
+      yPercent: -25,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".accessories-hero",
+        start: "top top",
+        end: "bottom top",
+        scrub: 1
+      }
+    });
+
+    // Text fade-in
+    gsap.from(".hero-content h1", { opacity: 0, y: 100, duration: 1.2, delay: 0.3 });
+    gsap.from(".hero-content p", { opacity: 0, y: 80, duration: 1, delay: 0.6 });
+    gsap.from(".shop-links a", { opacity: 0, y: 60, duration: 0.8, delay: 0.9, stagger: 0.2 });
+
+</script>
+
+<script>
+  // === GRID DATA ===
+  const grids = {
+    product: [
+      { icon: "ri-macbook-line", text: "Mac", link: "mac.html" },
+      { icon: "ri-tablet-line", text: "iPad", link: "iPad.html" },
+      { icon: "ri-smartphone-line", text: "iPhone", link: "#" },
+      { icon: "ri-watch-line", text: "Watch", link: "watch.html" },
+      { icon: "ri-vr-glasses-fill", text: "Apple Vision Pro", link: "#" },
+      { icon: "ri-earphone-line", text: "AirPods", link: "#" },
+      { icon: "ri-tv-2-line", text: "TV & Home", link: "#" },
+      { icon: "ri-beats-fill", text: "Beats", link: "#" }
+    ],
+    category: [
+      { icon: "ri-sparkling-2-fill", text: "New Arrivals", link: "#" },
+      { icon: "ri-shield-fill", text: "Cases & Protection", link: "#" },
+      { icon: "ri-plug-2-fill", text: "Charging Essentials", link: "#" },
+      { icon: "ri-wireless-charging-fill", text: "MagSafe", link: "#" },
+      { icon: "ri-headphone-fill", text: "Headphones & Speakers", link: "#" },
+      { icon: "ri-watch-2-fill", text: "Apple Watch Bands", link: "#" },
+      { icon: "ri-vr-glasses-fill", text: "Apple Vision Pro", link: "#" },
+      { icon: "ri-home-wifi-fill", text: "Home Office", link: "#" },
+      { icon: "ri-keyboard-fill", text: "Mice & Keyboards", link: "#" },
+      { icon: "ri-fingerprint-fill", text: "AirTag and Accessories", link: "airtag.html" },
+      { icon: "ri-run-fill", text: "Health & Fitness", link: "#" },
+      { icon: "ri-gamepad-fill", text: "Gaming", link: "#" },
+      { icon: "ri-camera-fill", text: "Photography", link: "#" },
+      { icon: "ri-pencil-ruler-2-fill", text: "Creative Tools", link: "#" },
+      { icon: "ri-home-gear-fill", text: "Smart Home Accessories", link: "#" },
+      { icon: "ri-app-store-fill", text: "Software", link: "#" },
+      { icon: "ri-hard-drive-2-fill", text: "Storage", link: "#" }
+    ]
+  };
+
+  // === DOM ===
+  const tabs = document.querySelectorAll('.browse-tabs a');
+  const container = document.querySelector('.grid-container');
+  const toggleBtn = document.querySelector('.show-toggle');
+
+  // === State ===
+  let currentTab = localStorage.getItem('browseTab') || 'category';
+  let isExpanded = localStorage.getItem('browseExpanded') === 'true';
+
+  // === Render Grid ===
+  function renderGrid() {
+    const data = grids[currentTab];
+    const visibleCount = currentTab === 'product' ? 8 : 10;
+    const itemsToShow = isExpanded ? data.length : visibleCount;
+
+    container.innerHTML = data.slice(0, itemsToShow).map(item => `
+      <a href="${item.link}" class="grid-item">
+        <div class="icon-circle"><i class="${item.icon}"></i></div>
+        <p>${item.text}</p>
+      </a>
+    `).join('');
+
+    // Add hidden items (for animation)
+    if (!isExpanded && data.length > visibleCount) {
+      container.innerHTML += data.slice(visibleCount).map(item => `
+        <a href="${item.link}" class="grid-item" style="display:none;">
+          <div class="icon-circle"><i class="${item.icon}"></i></div>
+          <p>${item.text}</p>
+        </a>
+      `).join('');
+    }
+
+    // Show with animation
+    setTimeout(() => container.classList.add('show'), 50);
+  }
+
+  // === Tab Switch ===
+  tabs.forEach(tab => {
+    tab.addEventListener('click', (e) => {
+      e.preventDefault();
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      currentTab = tab.dataset.tab;
+      localStorage.setItem('browseTab', currentTab);
+      isExpanded = false;
+      localStorage.setItem('browseExpanded', 'false');
+      container.classList.remove('show');
+      renderGrid();
+      updateToggleText();
+    });
+  });
+
+  // === Show More/Less ===
+  function updateToggleText() {
+    const data = grids[currentTab];
+    const visibleCount = currentTab === 'product' ? 8 : 10;
+    if (data.length > visibleCount) {
+      toggleBtn.style.display = 'block';
+      toggleBtn.textContent = isExpanded ? 'Show less ↑' : 'Show more ↓';
+      toggleBtn.classList.toggle('collapsed', isExpanded);
+    } else {
+      toggleBtn.style.display = 'none';
+    }
+  }
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    isExpanded = !isExpanded;
+    localStorage.setItem('browseExpanded', isExpanded);
+    container.classList.remove('show');
+    renderGrid();
+    updateToggleText();
+  });
+
+  // === INIT ===
+  document.querySelector(`[data-tab="${currentTab}"]`).classList.add('active');
+  renderGrid();
+  updateToggleText();
+</script>
+</body>
+</html>
