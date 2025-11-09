@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f8f9fb;
+      --text: #222;
+      --card-bg: #ffffff;
+      --btn-bg: #007aff;
+      --btn-text: #fff;
+      --border: #e2e2e2;
+    }
+
+    .dark-mode {
+      --bg: #121212;
+      --text: #f1f1f1;
+      --card-bg: #1f1f1f;
+      --btn-bg: #0d6efd;
+      --btn-text: #fff;
+      --border: #333;
+    }
+
+    * {
+      transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: var(--card-bg);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 1.5em;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .toggle-container button {
+      background: var(--btn-bg);
+      color: var(--btn-text);
+      border: none;
+      padding: 8px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      border: 1px solid var(--border);
+    }
+
+    h2 {
+      margin-top: 0;
+      text-align: center;
+      color: var(--text);
+    }
+
+    .section {
+      margin-top: 25px;
+      border-top: 1px solid var(--border);
+      padding-top: 15px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      margin-top: 8px;
+      font-family: "Poppins", sans-serif;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .save-btn, .add-btn {
+      background: var(--btn-bg);
+      color: var(--btn-text);
+      border: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      margin-top: 8px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .save-btn:hover, .add-btn:hover {
+      opacity: 0.85;
+    }
+
+    .favorites-list li {
+      list-style: none;
+      background: #8882;
+      padding: 8px;
+      margin: 5px 0;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .favorites-list button {
+      background: crimson;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 5px 8px;
+      cursor: pointer;
+    }
+
+    .logout-btn {
+      display: block;
+      width: 100%;
+      background: var(--btn-bg);
+      color: var(--btn-text);
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 25px;
+      font-weight: 600;
+    }
+
+    .logout-btn:hover {
+      opacity: 0.9;
+    }
+
+    .success-message {
+      color: green;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 850px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Profile</h1>
+    <div class="toggle-container">
+      <button id="toggleTheme">	&#127765 Dark / &#127761 Light</button>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <div class="card">
+      <h2>Information</h2>
+
+      <div class="info">
+        <p><strong>Name:</strong> <span id="username"></span></p>
+        <p><strong>Email:</strong> <span id="useremail"></span></p>
+      </div>
+
+      <div class="section">
+        <h3>Address</h3>
+        <input type="text" id="addressInput" placeholder="Enter your address">
+        <button class="save-btn" onclick="saveAddress()">Save</button>
+        <p id="savedAddress"></p>
+      </div>
+
+      <div class="section">
+        <h3>Payment Method</h3>
+        <input type="text" id="paymentInput" placeholder="Enter payment method">
+        <button class="save-btn" onclick="savePayment()">Save</button>
+        <p id="savedPayment"></p>
+      </div>
+
+      <div class="section">
+        <h3>Favorites</h3>
+        <ul class="favorites-list" id="favoritesList"></ul>
+        <div style="display: flex; gap: 10px; margin-top: 10px;">
+          <input type="text" id="favInput" placeholder="Add a new favorite">
+          <button class="add-btn" onclick="addFavorite()">Add</button>
+        </div>
+      </div>
+
+      <button class="logout-btn" id="logoutBtn">Log Out</button>
+    </div>
+
+
+    <div class="card">
+      <h2>Feedback & Contacts</h2>
+
+      <div class="section">
+        <h3>Feedback</h3>
+        <textarea id="feedbackInput" placeholder="Write your feedback here..."></textarea>
+        <button class="save-btn" onclick="sendFeedback()">Send Feedback</button>
+        <p id="feedbackMessage" class="success-message"></p>
+      </div>
+
+      <div class="section">
+        <h3>Contacts</h3>
+        <p><strong>Email:</strong> support@applestore.com</p>
+        <p><strong>Phone:</strong> + 7(777) 555-0199</p>
+        <p><strong>Location:</strong> Astana, Kazakhstan</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (!user) {
+      window.location.href = 'login.html';
+    } else {
+      document.getElementById('username').textContent = user.name;
+      document.getElementById('useremail').textContent = user.email;
+    }
+
+    const toggleBtn = document.getElementById('toggleTheme');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+    });
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+
+    const addressInput = document.getElementById('addressInput');
+    const savedAddress = document.getElementById('savedAddress');
+
+    function saveAddress() {
+      const address = addressInput.value.trim();
+      if (address) {
+        localStorage.setItem('address', address);
+        savedAddress.textContent = "Saved: " + address;
+        addressInput.value = '';
+      }
+    }
+
+    if (localStorage.getItem('address')) {
+      savedAddress.textContent = "Saved: " + localStorage.getItem('address');
+    }
+
+    const paymentInput = document.getElementById('paymentInput');
+    const savedPayment = document.getElementById('savedPayment');
+
+    function savePayment() {
+      const payment = paymentInput.value.trim();
+      if (payment) {
+        localStorage.setItem('payment', payment);
+        savedPayment.textContent = "Saved: " + payment;
+        paymentInput.value = '';
+      }
+    }
+
+    if (localStorage.getItem('payment')) {
+      savedPayment.textContent = "Saved: " + localStorage.getItem('payment');
+    }
+
+    const favInput = document.getElementById('favInput');
+    const favoritesList = document.getElementById('favoritesList');
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+    function renderFavorites() {
+      favoritesList.innerHTML = '';
+      favorites.forEach((item, index) => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        const delBtn = document.createElement('button');
+        delBtn.textContent = 'Delete';
+        delBtn.onclick = () => {
+          favorites.splice(index, 1);
+          localStorage.setItem('favorites', JSON.stringify(favorites));
+          renderFavorites();
+        };
+        li.appendChild(delBtn);
+        favoritesList.appendChild(li);
+      });
+    }
+
+    function addFavorite() {
+      const fav = favInput.value.trim();
+      if (fav) {
+        favorites.push(fav);
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+        favInput.value = '';
+        renderFavorites();
+      }
+    }
+
+    renderFavorites();
+
+
+    function sendFeedback() {
+      const feedback = document.getElementById('feedbackInput').value.trim();
+      const feedbackMsg = document.getElementById('feedbackMessage');
+      if (feedback) {
+        localStorage.setItem('feedback', feedback);
+        feedbackMsg.textContent = "Thank you for your feedback!";
+        document.getElementById('feedbackInput').value = '';
+      }
+    }
+
+    document.getElementById('logoutBtn').addEventListener('click', () => {
+      localStorage.removeItem('user');
+      window.location.href = 'login.html';
+    });
+  </script>
+</body>
+</html>
